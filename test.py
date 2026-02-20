@@ -7,9 +7,10 @@ from torch import nn, optim
 from torch.autograd import Variable
 from torch.utils.data import DataLoader
 from torchvision.utils import save_image
-from EGAFNet import *
+from model.EGAFNet import *
 import os
 import torch
+from PIL import Image
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)             # cuda或者CPU跑程序
@@ -52,12 +53,17 @@ else:
 
 
 
-path1 = r'E:\Dataset\WHU512\test\image1'    # 测试原图路径，r转义
-path2 = r'E:\Dataset\WHU512\test\label1'   # 测试标签路径
-path3 = r'E:\Dataset\WHU512\test\edge'
+# path1 = r'E:\Dataset\WHU512\test\image1'    # 测试原图路径，r转义
+# path2 = r'E:\Dataset\WHU512\test\label1'   # 测试标签路径
+# path3 = r'E:\Dataset\WHU512\test\edge'
 # path1 = r'E:\code\Dataset\China500\test\image'    # 测试原图路径，r转义
 # path2 = r'E:\code\Dataset\China500\test\label'   # 测试标签路径
 # path3 = r'E:\code\Dataset\China500\test\edge'
+
+#修改一
+path1 = r'D:\WHU Building\test\image'    # 测试原图路径，r转义
+path2 = r'D:\WHU Building\test\label'   # 测试标签路径
+path3 = r'D:\WHU Building\test\edge'
 BuildDataset = MyDataset_test(path1, path2, path3)                                        # 将原图和标签传入MyDataset
 test_loader = DataLoader(BuildDataset, batch_size=1)
 
