@@ -20,15 +20,15 @@ def make_dataset1(root1, root2, root3):     # root1为原图地址，root2为标
         # img = os.path.join(root1, "%d.bmp" % i)  # 后缀要根据数据集的情况进行修改
         # mask = os.path.join(root2, "%d.bmp" % i)
         # edge = os.path.join(root3, "%d.bmp" % i)
-        # img = os.path.join(root1, "%d.tif" % i)  # 后缀要根据数据集的情况进行修改
-        # mask = os.path.join(root2, "%d.tif" % i)
-        # edge = os.path.join(root3, "%d.tif" % i)
+        img = os.path.join(root1, "%d.tif" % i)  # 后缀要根据数据集的情况进行修改
+        mask = os.path.join(root2, "%d.tif" % i)
+        edge = os.path.join(root3, "%d.tif" % i)
         # img = os.path.join(root1, "%d.png" % i)  # 后缀要根据数据集的情况进行修改
         # mask = os.path.join(root2, "%d.png" % i)
         # edge = os.path.join(root3, "%d.png" % i)
-        img = os.path.join(root1, "%d.tif" % i)  # 后缀要根据数据集的情况进行修改
-        mask = os.path.join(root2, "%d.png" % i)
-        edge = os.path.join(root3, "%d.png" % i)
+        # img = os.path.join(root1, "%d.tif" % i)  # 后缀要根据数据集的情况进行修改
+        # mask = os.path.join(root2, "%d.png" % i)
+        # edge = os.path.join(root3, "%d.png" % i)
         imgs.append((img, mask, edge))
     return imgs
 

@@ -8,7 +8,7 @@ from datetime import datetime
 import scipy.ndimage as ndimage
 from Dataloader import *                  # 导入DataLoader
 
-from EGAFNet import *
+from model.EGAFNet import *
 
 from torchvision.utils import save_image  # 导入save_image包
 
@@ -59,12 +59,12 @@ else:                             # 不在就不加载
 
 
 
-train_path1 = r'E:\Dataset\WHU512\train\image'    # 训练原图路径，r转义
-train_path2 = r'E:\Dataset\WHU512\train\label'    # 训练标签路径，r转义
-train_path3 = r'E:\Dataset\WHU512\train\edge'
-test_path1 = r'E:\Dataset\WHU512\test\image1'    # 测试原图路径，r转义
-test_path2 = r'E:\Dataset\WHU512\test\label1'    # 测试原图路径，r转义
-test_path3 = r'E:\Dataset\WHU512\test\edge'
+train_path1 = r'D:\WHU Building\train\image'    # 训练原图路径，r转义
+train_path2 = r'D:\WHU Building\train\label'    # 训练标签路径，r转义
+train_path3 = r'D:\WHU Building\train\edge'
+test_path1 = r'D:\WHU Building\test\image'    # 测试原图路径，r转义
+test_path2 = r'D:\WHU Building\test\label'    # 测试原图路径，r转义
+test_path3 = r'D:\WHU Building\test\edge'
 # train_path1 = r'E:\Dataset\China500\train\image'    # 训练原图路径，r转义
 # train_path2 = r'E:\Dataset\China500\train\label'    # 训练标签路径，r转义
 # train_path3 = r'E:\Dataset\China500\train\edge'
